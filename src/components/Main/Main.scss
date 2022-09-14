@@ -1,0 +1,12 @@
+@use '../../assets/sass/_variables.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    max-height: 100vh;
+    width: 100vw;
+    background-color: $color-card-background-dark;
+}
