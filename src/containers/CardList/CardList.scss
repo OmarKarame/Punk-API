@@ -5,5 +5,14 @@
   }
 
 .card-list{
-    
+    background-image: linear-gradient(to right, $color-card-background-dark, $color-card-background-dark 49.95% , $color-card-background-light 50%, $color-card-background-light 100%);
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 2rem $color-secondary, -0.5rem -0.5rem 2rem $color-secondary, 0.5rem -0.5rem 2rem $color-secondary, -0.5rem 0.5rem 2rem $color-secondary, ;
 }

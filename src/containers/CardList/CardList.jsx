@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../../components/Card/Card'
 import { useState } from 'react'
+import './CardList.scss'
 
 const CardList = ({beers}) => {
   const [cardsJSX, setCards] = useState(beers?.map((beer, index) => {

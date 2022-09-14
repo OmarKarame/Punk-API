@@ -6,7 +6,7 @@
 }
 
 .main{
-    max-height: 100vh;
-    width: 100vw;
-    background-color: $color-card-background-dark;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
 }

@@ -1,10 +1,30 @@
 @use '../../assets/sass/_variables.scss' as *;
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 .card{
-    height: 10rem;
-    width: 6rem;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 20rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     &__image{
-        height: 60%;
+        height: 50%;
         aspect-ratio: auto;
+    }
+    &__first-brewed{
+
+    }
+    &__
+    &__card__alcohol-info{
+        display: flex;
+        flex-direction: row;
     }
 }
