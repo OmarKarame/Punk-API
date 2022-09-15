@@ -6,18 +6,24 @@
 
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 10vh;
     width: 100%;
     align-items: center;
     &__navbar-icon{
         height: 30%;
     }
+    &__title{
+        color: $color-black;
+    }
+    &__name{
+        color: $color-black;
+    }
 }
 
 .header-dark{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 10vh;
     width: 100%;
     align-items: center;

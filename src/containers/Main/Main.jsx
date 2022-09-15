@@ -49,7 +49,7 @@ const Main = ({beers}) => {
   return (
     <div className='main'>
       <SearchBar getTextSearch={getTextSearch} />
-        <CardList cardsJSX={cardsJSX} />
+      <CardList cardsJSX={cardsJSX} />
     </div>
   )
 }
