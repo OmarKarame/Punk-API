@@ -8,6 +8,8 @@ import Nav from "./components/Nav/Nav";
 const App = () => {
   const [beers, setBeers] = useState(null);
   const [url, setUrl] = useState("https://api.punkapi.com/v2/beers");
+  const [navDisplay, setNavDisplay] = useState(false);
+  const [headerDark, setHeaderDark] = useState(true);
 
   useEffect(() => {
     const getBeers = async () => {
@@ -22,8 +24,8 @@ const App = () => {
   if (beers){
     return (
       <div className="App">
-        <Header />
-        <Nav />
+        <Header navDisplay={navDisplay} setNavDisplay={setNavDisplay} headerDark={headerDark} setHeaderDark={setHeaderDark}/>
+        {navDisplay && <Nav />}
         <Main beers={beers}/>
       </div>
     );

@@ -1,13 +1,28 @@
 import React from 'react'
 import './Header.scss'
 import image from '../../assets/images/navbar-icon.png'
+import { useState } from 'react'
 
-const Header = () => {
+const Header = ({navDisplay, setNavDisplay, headerDark, setHeaderDark}) => {
+    const [headerClassName, setHeaderClassName] = useState("header");
+    const displayNav = () => {
+        changeHeaderDark();
+        setNavDisplay(!navDisplay);
+    }
+    const changeHeaderDark = () => {
+        setHeaderDark(!headerDark);
+        if (headerDark) {
+            setHeaderClassName("header-dark")
+        }
+        else {
+            setHeaderClassName("header")
+        }
+    }
   return (
-    <div className='header'>
-        <img src={image} alt="Navbar icon" className='header__navbar-icon' />
-        <h1 className='header__title'>PUNK <span>API</span></h1>
-        <h2 className='header__name'>Omar K</h2>
+    <div className={headerClassName}>
+        <img src={image} alt="Navbar icon" className={`${headerClassName}__navbar-icon`} onClick={displayNav}/>
+        <h1 className={`${headerClassName}__title`}>PUNK <span>API</span></h1>
+        <h2 className={`${headerClassName}__name`}>Omar K</h2>
     </div>
   )
 }

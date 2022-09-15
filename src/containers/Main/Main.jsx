@@ -1,16 +1,12 @@
 import './Main.scss';
-import { useState } from "react";
-import CardList from '../CardList/CardList';
+import { useEffect, useState } from "react";
+import CardList from '../../components/CardList/CardList';
 import Card from '../../components/Card/Card'
 import SearchBar from '../../components/SearchBar/SearchBar';
 
 const Main = ({beers}) => {
-  const [textSearch, setTextSearch] = useState("");
-
   const getTextSearch = (event) => {
-    setTextSearch(textSearch => event.target.value);
-    filterCards();
-    console.log(textSearch);
+    setTextSearch(event.target.value);
   }
 
   const [cardsJSX, setCards] = useState(beers?.map((beer, index) => {
@@ -27,6 +23,11 @@ const Main = ({beers}) => {
       </>
     )
   }));
+
+  const [textSearch, setTextSearch] = useState("");
+  useEffect(() => {
+    filterCards()
+  }, [cardsJSX])
 
   const filterCards = () => {
     setCards(beers.filter((beer) => beer.name.toLowerCase().startsWith(textSearch.toLowerCase())).map((beer, index) => {
