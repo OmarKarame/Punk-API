@@ -1,6 +1,8 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
 import Main from './components/Main/Main';
+import Header from './components/Header/Header';
+import Nav from "./components/Nav/Nav";
 
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
   if (beers){
     return (
       <div className="App">
+        <Header />
+        <Nav />
         <Main beers={beers}/>
       </div>
     );

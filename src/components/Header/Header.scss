@@ -1,4 +1,16 @@
+@use '../../assets/sass/_variables.scss' as *;
 * {
     margin: 0;
     padding: 0;
   }
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    width: 90%;
+    align-items: center;
+    &__navbar-icon{
+        height: 30%;
+    }
+}
