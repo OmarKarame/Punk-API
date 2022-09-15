@@ -1,6 +1,6 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
-import Main from './components/Main/Main';
+import Main from './containers/Main/Main';
 import Header from './components/Header/Header';
 import Nav from "./components/Nav/Nav";
 

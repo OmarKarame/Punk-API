@@ -1,0 +1,14 @@
+@use '../../assets/sass/_variables.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar{
+    height: 2rem;
+    width: 80%;
+    font-size: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+}

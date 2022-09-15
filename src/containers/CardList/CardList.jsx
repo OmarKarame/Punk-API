@@ -3,21 +3,8 @@ import Card from '../../components/Card/Card'
 import { useState } from 'react'
 import './CardList.scss'
 
-const CardList = ({beers}) => {
-  const [cardsJSX, setCards] = useState(beers?.map((beer, index) => {
-    return (
-      <>
-        <Card
-          key={index} 
-          name={beer.name}
-          firstBrewed={beer.first_brewed} 
-          description={beer.description} 
-          abv={beer.abv}
-          ibu={beer.ibu}
-          image={beer.image_url} />
-      </>
-    )
-  }));
+const CardList = ({cardsJSX}) => {
+
 
   return (
     <div className='card-list'>
