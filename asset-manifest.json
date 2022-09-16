@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Punk-API/static/css/main.31bea814.css",
-    "main.js": "/Punk-API/static/js/main.b6cf08fa.js",
-    "static/js/787.ae7c3095.chunk.js": "/Punk-API/static/js/787.ae7c3095.chunk.js",
-    "index.html": "/Punk-API/index.html",
-    "main.31bea814.css.map": "/Punk-API/static/css/main.31bea814.css.map",
-    "main.b6cf08fa.js.map": "/Punk-API/static/js/main.b6cf08fa.js.map",
-    "787.ae7c3095.chunk.js.map": "/Punk-API/static/js/787.ae7c3095.chunk.js.map"
+    "main.css": "/punk-api/static/css/main.31bea814.css",
+    "main.js": "/punk-api/static/js/main.c5c859ce.js",
+    "static/js/787.ae7c3095.chunk.js": "/punk-api/static/js/787.ae7c3095.chunk.js",
+    "index.html": "/punk-api/index.html",
+    "main.31bea814.css.map": "/punk-api/static/css/main.31bea814.css.map",
+    "main.c5c859ce.js.map": "/punk-api/static/js/main.c5c859ce.js.map",
+    "787.ae7c3095.chunk.js.map": "/punk-api/static/js/787.ae7c3095.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31bea814.css",
-    "static/js/main.b6cf08fa.js"
+    "static/js/main.c5c859ce.js"
   ]
 }
