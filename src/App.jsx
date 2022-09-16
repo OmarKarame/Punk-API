@@ -13,6 +13,7 @@ const App = () => {
   const [abvFiltered, setAbvFiltered] = useState(false);
   const [abvValue, setAbvValue] = useState(0);
   const [brewedBefore, setBrewedBefore] = useState(false);
+  const [acidity, setAcidity] = useState(false);
 
   useEffect(() => {
     const getBeers = async () => {
@@ -35,6 +36,16 @@ const App = () => {
   const toggleFilterByAbv = () => {
     updateCardFilter()
     setAbvFiltered(!abvFiltered);
+  }
+
+  const toggleFilterByDate = () => {
+    updateCardFilter()
+    setAbvFiltered(!brewedBefore);
+  }
+
+  const toggleFilterByAcidity = () => {
+    updateCardFilter()
+    setAbvFiltered(!acidity)
   }
 
   const updateCardFilter = () => {
