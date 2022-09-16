@@ -15,19 +15,16 @@ const App = () => {
   const [brewedBefore, setBrewedBefore] = useState(false);
   const [acidity, setAcidity] = useState(false);
 
+
   useEffect(() => {
     const getBeers = async () => {
       const res = await fetch(url);
       const data = await res.json();
       setBeers(data)
-      console.log(beers);
     }
     getBeers()
-  }, [url]);
-
-  useEffect(() => {
     updateCardFilter()
-  }, [abvValue])
+  }, [abvFiltered, abvValue, url])
 
   const getSliderAbvValue = (event) => {
     setAbvValue(event.target.value);
@@ -40,12 +37,12 @@ const App = () => {
 
   const toggleFilterByDate = () => {
     updateCardFilter()
-    setAbvFiltered(!brewedBefore);
+    setBrewedBefore(!brewedBefore);
   }
 
   const toggleFilterByAcidity = () => {
     updateCardFilter()
-    setAbvFiltered(!acidity)
+    setAcidity(!acidity)
   }
 
   const updateCardFilter = () => {
@@ -72,19 +69,26 @@ const App = () => {
     return (
       <div className="App">
         <Header 
-        navDisplay={navDisplay} 
-        setNavDisplay={setNavDisplay} 
-        headerDark={headerDark} 
-        setHeaderDark={setHeaderDark}/>
+          navDisplay={navDisplay} 
+          setNavDisplay={setNavDisplay} 
+          headerDark={headerDark} 
+          setHeaderDark={setHeaderDark}/>
 
         {navDisplay && <Nav 
-        getSliderAbvValue={getSliderAbvValue} 
-        abvValue={abvValue}
-        abvFiltered={abvFiltered}
-        toggleFilterByAbv={toggleFilterByAbv}
+          getSliderAbvValue={getSliderAbvValue} 
+          abvValue={abvValue}
+          abvFiltered={abvFiltered}
+          toggleFilterByAbv={toggleFilterByAbv}
+          brewedBefore={brewedBefore}
+          toggleFilterByDate={toggleFilterByDate}
+          acidity={acidity}
+          toggleFilterByAcidity={toggleFilterByAcidity}
         />}
 
-        <Main beers={beers}/>
+        <Main 
+          beers={beers}
+          acidity={acidity}
+        />
       </div>
     );
   }

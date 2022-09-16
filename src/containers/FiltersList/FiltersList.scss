@@ -12,4 +12,19 @@
     &__slider{
         color: $color-secondary;
     }
+    &__abv{
+        display: flex;
+        width: 40%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__button-unclicked{
+        height: 2rem;
+        width: 4rem;
+        background-color: $color-secondary;
+        font-size: 1.5rem;
+    }
+    &__button-clicked{
+
+    }
 }

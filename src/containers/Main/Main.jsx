@@ -4,7 +4,7 @@ import CardList from '../../components/CardList/CardList';
 import Card from '../../components/Card/Card'
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-const Main = ({beers}) => {
+const Main = ({beers, acidity}) => {
   const getTextSearch = (event) => {
     setTextSearch(event.target.value);
   }
