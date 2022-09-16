@@ -1,7 +1,7 @@
 import './Nav.scss'
 import FiltersList from '../../containers/FiltersList/FiltersList'
 
-const Nav = ({getSliderAbvValue, abvValue, abvFiltered, toggleFilterByAbv, brewedBefore, toggleFilterByDate, acidity, toggleFilterByAcidity}) => {
+const Nav = ({getSliderAbvValue, abvValue, abvFiltered, toggleFilterByAbv, brewedBefore, toggleFilterByDate, acidity, toggleFilterByAcidity, resetFilters}) => {
   return (
     <div className='nav'>
         <FiltersList 
@@ -13,6 +13,7 @@ const Nav = ({getSliderAbvValue, abvValue, abvFiltered, toggleFilterByAbv, brewe
           toggleFilterByDate={toggleFilterByDate}
           acidity={acidity}
           toggleFilterByAcidity={toggleFilterByAcidity}
+          resetFilters={resetFilters}
         />
     </div>
   )

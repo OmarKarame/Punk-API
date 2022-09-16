@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     getBeers()
     updateCardFilter()
-  }, [abvFiltered, abvValue, brewedBefore, acidity, url])
+  }, [acidity, brewedBefore, abvValue, url])
 
   const getSliderAbvValue = (event) => {
     setAbvValue(event.target.value);
@@ -33,17 +33,19 @@ const App = () => {
 
   const toggleFilterByAbv = () => {
     setAbvFiltered(!abvFiltered);
-    // updateCardFilter()
   }
 
   const toggleFilterByDate = () => {
     setBrewedBefore(!brewedBefore);
-    // updateCardFilter()
   }
 
   const toggleFilterByAcidity = () => {
     setAcidity(!acidity)
-    // updateCardFilter()
+  }
+  const resetFilters = () => {
+    setAbvFiltered(false)
+    setBrewedBefore(false)
+    setAcidity(false)
   }
 
   const updateCardFilter = () => {
@@ -84,6 +86,7 @@ const App = () => {
           toggleFilterByDate={toggleFilterByDate}
           acidity={acidity}
           toggleFilterByAcidity={toggleFilterByAcidity}
+          resetFilters={resetFilters}
         />}
 
         <Main 

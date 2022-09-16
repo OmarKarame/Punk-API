@@ -33,7 +33,7 @@ const Main = ({beers, acidity}) => {
 
   useEffect(() => {
     if (acidity) {
-      filterCardsByAcidity()
+      filterCardsByAcidity();
     }
     else {
       displayAllCards();
@@ -91,7 +91,21 @@ const Main = ({beers, acidity}) => {
   }
 
   const filterCardsByAcidity = () => {
-    setCards(beers.filter((beer) => beer.ph < 4).map((beer, index) => {
+    const newBeersArr = beers.filter((beer) => beer.ph <= 4).map((beer, index) => {
+      return (
+        <>
+          <Card
+            key={index} 
+            name={beer.name}
+            firstBrewed={beer.first_brewed} 
+            description={beer.description} 
+            abv={beer.abv}
+            ibu={beer.ibu}
+            image={beer.image_url} />
+        </>
+      )
+    })
+    setCards(beers.filter((beer) => beer.ph <= 4).map((beer, index) => {
       return (
         <>
           <Card
@@ -105,7 +119,7 @@ const Main = ({beers, acidity}) => {
         </>
       )
     }))
-    setNumberOfCardsBeingDisplayed(beers.length);
+    setNumberOfCardsBeingDisplayed(newBeersArr.length);
   }
 
   return (

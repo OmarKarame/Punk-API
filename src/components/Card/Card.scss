@@ -50,3 +50,49 @@
         font-size: 2rem;
     }
 }
+
+.card:hover{
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 28rem;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5rem 0.5rem 2rem $color-black;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 40%;
+        width: 100%;
+    }
+    &__image{
+        height: 50%;
+        aspect-ratio: auto;
+        margin: 0rem 0rem 2rem 0rem;
+    }
+    &__first-brewed{
+        font-size: 1.3rem;
+        color: $color-black;
+        font-weight: 300;
+    }
+    &__beer-name{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    &__alcohol-info{
+        display: flex;
+        flex-direction: row;
+        color: $color-secondary;
+        width: 80%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__line-design{
+        font-size: 2rem;
+    }
+}

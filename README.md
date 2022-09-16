@@ -20,7 +20,29 @@ This project uses the punk api to display beers and their information on the scr
 
 ## Usage <a name = "usage"></a>
 
-The user can view the landing page of the website. The page contains a header and main. The header has a button on the far left that the user can click in order to display a Navbar that is collapsable by pressing the button again. Once the Navbar is being displayed, the user can filter through the beers using 3 filters. The first filter is a slider that will display all the beers that have an ABV that is greater than a certain value based on the slider. The second filter is a button that will display all the beers that were brewed before 2010. The last filter is a button that will display all the beers that are below the pH of 4. Below the Navbar, the user can find a search bar where they can search for a beer by name. The user can only search for beers based on the filters, if any, they have chosen. The user can also click on oach beer to have them be displayed with more info.
+The user can view the landing page of the website. The page contains a header and main. The header has a button on the far left that the user can click in order to display a Navbar that is collapsable by pressing the button again. Once the Navbar is being displayed, the user can filter through the beers using 3 filters. The first filter is a slider that will display all the beers that have an ABV that is greater than a certain value based on the slider. The second filter is a button that will display all the beers that were brewed before 2010. The last filter is a button that will display all the beers that are below the pH of 4. Below the Navbar, the user can find a search bar where they can search for a beer by name. The user can only search for beers based on the filters, if any, they have chosen. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Component Tree <a name = "component_tree"></a>
 
