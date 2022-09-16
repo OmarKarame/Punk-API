@@ -21,8 +21,8 @@ const Header = ({navDisplay, setNavDisplay, headerDark, setHeaderDark}) => {
   return (
     <div className={headerClassName}>
         <img src={image} alt="Navbar icon" className={`${headerClassName}__navbar-icon`} onClick={displayNav}/>
-        <h1 className={`${headerClassName}__title`}>PUNK <span>API</span></h1>
-        <h2 className={`${headerClassName}__name`}>Omar K</h2>
+        <h1 className={`${headerClassName}__title`}>BREWDOG</h1>
+        <h2 className={`${headerClassName}__name`}>OK</h2>
     </div>
   )
 }
